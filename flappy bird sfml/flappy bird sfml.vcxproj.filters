@@ -42,13 +42,16 @@
     <ClCompile Include="src\physic\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\physic\Point.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\physic\Physic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\object\Bird.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physic\Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\Pipe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,13 +83,25 @@
     <ClInclude Include="src\physic\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\physic\Point.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\physic\Physic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\object\Bird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Configure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\physic\Collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\Unmovable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\Pipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

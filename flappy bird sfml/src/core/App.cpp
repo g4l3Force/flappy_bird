@@ -3,6 +3,7 @@
 #include <state/SplashState.h>
 #include "Log.h"
 #include "StateManager.h"
+#include <core/Configure.h>
 
 bool App::isPress = false;
 
@@ -21,7 +22,7 @@ void App::run()
 	StateManager::instance().pushBack(std::make_shared<SplashState>());
 
 
-	m_window->create(sf::VideoMode(800, 600), "flappy bird", sf::Style::Close);
+	m_window->create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "flappy bird", sf::Style::Close);
 	m_window->setVerticalSyncEnabled(true);
 
 	while (m_window->isOpen()) {

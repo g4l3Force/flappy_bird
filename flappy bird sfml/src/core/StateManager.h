@@ -25,7 +25,7 @@ private:
 public:
 	static StateManager& instance()
 	{
-		if (s_instance == NULL) s_instance = new StateManager();
+		if (s_instance == nullptr) s_instance = new StateManager();
 		return *s_instance;
 	}
 
