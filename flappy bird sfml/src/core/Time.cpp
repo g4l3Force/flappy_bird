@@ -34,11 +34,12 @@ float Time::getDuration()
 	return m_duration.count();
 }
 
-void Time::calculateDeltaTime()
+float Time::calculateDeltaTime()
 {
 	m_currentTime = std::chrono::high_resolution_clock::now();
 	m_deltaTime = m_currentTime - m_lastTime;
 	m_lastTime = m_currentTime;
+	return m_deltaTime.count();
 }
 
 float Time::getDeltaTime()

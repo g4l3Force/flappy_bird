@@ -31,3 +31,9 @@ void StateManager::draw(sf::RenderWindow& window)
 	m_state.back().get()->draw(window);
 }
 
+void StateManager::handleInput()
+{
+	m_state.back().get()->handleInput();
+}
+
+

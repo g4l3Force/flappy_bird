@@ -141,20 +141,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\object\Bird.cpp" />
+    <ClCompile Include="src\physic\Physic.cpp" />
+    <ClCompile Include="src\physic\Point.cpp" />
+    <ClCompile Include="src\utils\Animation.cpp" />
+    <ClCompile Include="src\state\MenuState.cpp" />
     <ClCompile Include="src\state\GameState.cpp" />
     <ClCompile Include="src\state\SplashState.cpp" />
     <ClCompile Include="src\core\App.cpp" />
     <ClCompile Include="src\core\main.cpp" />
     <ClCompile Include="src\core\StateManager.cpp" />
     <ClCompile Include="src\core\Time.cpp" />
+    <ClCompile Include="src\physic\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\object\Bird.h" />
+    <ClInclude Include="src\physic\Physic.h" />
+    <ClInclude Include="src\physic\Point.h" />
+    <ClInclude Include="src\utils\Animation.h" />
+    <ClInclude Include="src\state\MenuState.h" />
     <ClInclude Include="src\core\Log.h" />
     <ClInclude Include="src\state\GameState.h" />
     <ClInclude Include="src\state\SplashState.h" />
     <ClInclude Include="src\core\App.h" />
     <ClInclude Include="src\core\StateManager.h" />
     <ClInclude Include="src\core\Time.h" />
+    <ClInclude Include="src\physic\Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

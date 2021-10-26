@@ -18,7 +18,7 @@ public:
 	void endFrame();
 	float getDuration();
 
-	void calculateDeltaTime();
+	float calculateDeltaTime();
 	float getDeltaTime();
 	float getElapsed();
 };
