@@ -65,7 +65,6 @@ void App::update()
 
 void App::draw() 
 {
-	m_window->clear(sf::Color::White);
 	StateManager::instance().draw(*m_window.get());
 	m_window->display();
 }

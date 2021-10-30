@@ -42,6 +42,7 @@ void Bird::handleInput()
 			//m_Sprite.setPosition(0, 0);
 			m_physic->addForce(4.0f);
 			//m_physic->setPos(50.0f, 20.0f);
+			LOG("SPACE");
 		}
 	}
 }

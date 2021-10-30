@@ -20,4 +20,5 @@ public:
 	void handleInput();
 	void update(float deltaTime) override;
 	void draw(sf::RenderWindow& window) override;
+	sf::Sprite getSprite() { return m_sprite; }
 };

@@ -141,11 +141,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\state\ReplayState.cpp" />
+    <ClCompile Include="src\object\Ground.cpp" />
     <ClCompile Include="src\object\Pipe.cpp" />
     <ClCompile Include="src\physic\Collision.cpp" />
     <ClCompile Include="src\object\Bird.cpp" />
     <ClCompile Include="src\physic\Physic.cpp" />
-    <ClCompile Include="src\utils\Animation.cpp" />
+    <ClCompile Include="src\graphic\BirdAnimation.cpp" />
     <ClCompile Include="src\state\MenuState.cpp" />
     <ClCompile Include="src\state\GameState.cpp" />
     <ClCompile Include="src\state\SplashState.cpp" />
@@ -156,13 +158,16 @@
     <ClCompile Include="src\physic\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\IStates.h" />
+    <ClInclude Include="src\state\ReplayState.h" />
+    <ClInclude Include="src\object\Ground.h" />
     <ClInclude Include="src\object\Pipe.h" />
     <ClInclude Include="src\object\Object.h" />
     <ClInclude Include="src\physic\Collision.h" />
     <ClInclude Include="src\core\Configure.h" />
     <ClInclude Include="src\object\Bird.h" />
     <ClInclude Include="src\physic\Physic.h" />
-    <ClInclude Include="src\utils\Animation.h" />
+    <ClInclude Include="src\graphic\BirdAnimation.h" />
     <ClInclude Include="src\state\MenuState.h" />
     <ClInclude Include="src\core\Log.h" />
     <ClInclude Include="src\state\GameState.h" />

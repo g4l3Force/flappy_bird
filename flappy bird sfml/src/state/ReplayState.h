@@ -1,18 +1,15 @@
 #pragma once
 #include <core/StateManager.h>
-#include <object/Bird.h>
-#include <object/Pipe.h>
-#include <object/Ground.h>
+#include <SFML/Graphics.hpp>
 
-class GameState : public IState
+class ReplayState : public IState
 {
 private:
-	std::shared_ptr<Bird> m_bird;
-	std::shared_ptr<Ground> m_ground;
-	std::shared_ptr<Pipe> m_pipe;
-	float m_gameTime;
-	int m_score;
+	sf::Image m_replayImage;
+	sf::Texture m_replayTexture;
+	sf::Sprite m_replaySprite;
 
+	sf::Vector2i m_windowPos;
 public:
 	// Inherited via IState
 	virtual void init() override;
@@ -21,6 +18,5 @@ public:
 	virtual void draw(sf::RenderWindow& window) override;
 	virtual void onPushState() override;
 	virtual void onPopState() override;
-	void print() { printf("%i", m_score); }
 };
 

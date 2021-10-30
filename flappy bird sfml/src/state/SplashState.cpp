@@ -34,6 +34,7 @@ void SplashState::update(float deltaTime)
 void SplashState::draw(sf::RenderWindow& window)
 {
 	//printf("splash draw\n");
+	window.clear(sf::Color::White);
 	window.draw(m_sprite);
 }
 

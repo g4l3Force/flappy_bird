@@ -4,15 +4,8 @@
 #include <core/StateManager.h>
 #include "GameState.h"
 #include <memory>
+#include <physic/Collision.h>
 
-bool mouseCollision(sf::Vector2i mousePosition, float x1, float x2, float y1, float y2)// 1 < 2
-{
-	if (mousePosition.x > x1 && mousePosition.x < x2 && mousePosition.y > y1 && mousePosition.y < y2)
-	{
-		return true;
-	}
-	else return false;
-}
 
 void MenuState::init()
 {
@@ -38,7 +31,7 @@ void MenuState::init()
 
 void MenuState::handleInput()
 {
-	if (mouseCollision(sf::Mouse::getPosition() - m_windowPos,
+	if (Collision::instance().mouseCollision(sf::Mouse::getPosition() - m_windowPos,
 		300, 300 + m_playButton.getTextureRect().width,
 		200, 200 + m_playButton.getTextureRect().height))
 	{
@@ -57,6 +50,7 @@ void MenuState::update(float deltaTime)
 
 void MenuState::draw(sf::RenderWindow& window)
 {
+	window.clear(sf::Color::White);
 	m_windowPos = window.getPosition();
 	window.draw(m_backgroundSprite);
 	window.draw(m_playButton);
