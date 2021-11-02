@@ -36,13 +36,7 @@
     <ClCompile Include="src\state\MenuState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\graphic\BirdAnimation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\physic\Transform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\physic\Physic.cpp">
+    <ClCompile Include="src\graphic\Animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\object\Bird.cpp">
@@ -57,7 +51,7 @@
     <ClCompile Include="src\object\Ground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\state\ReplayState.cpp">
+    <ClCompile Include="src\object\BackGround.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,13 +77,7 @@
     <ClInclude Include="src\state\MenuState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\graphic\BirdAnimation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\physic\Transform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\physic\Physic.h">
+    <ClInclude Include="src\graphic\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\object\Bird.h">
@@ -113,11 +101,78 @@
     <ClInclude Include="src\object\Ground.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\state\ReplayState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\core\IStates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\object\BackGround.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\art.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bird1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bird2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bird3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\bird4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\gamebackground.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\ground.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\ground1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\highscore.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\pipe.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\playbutton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\replay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\splashscreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\falcon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\tree.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\die.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="assets\point.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="assets\hit.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="assets\wing.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\rainyhearts.ttf" />
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@ private:
 	void input();
 	void update();
 	void draw();
+
 public:
 	static bool isPress;
 	App();

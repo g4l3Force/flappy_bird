@@ -23,6 +23,7 @@ public:
 	void popBack();
 	void popFront();
 	std::shared_ptr<IState> getState();
+	std::shared_ptr<IState> findState(std::shared_ptr<GameState> state);
 	void update(float deltaTime);
 	void draw(sf::RenderWindow& window);
 	void handleInput();

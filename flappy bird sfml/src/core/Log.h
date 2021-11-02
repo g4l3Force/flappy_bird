@@ -9,7 +9,9 @@
 #include <iomanip> // put_time
 #include <string>  // string
 
+#ifdef _DEBUG
 #define ISCONSOLELOG
+#endif
 #define ISFILELOG
 
 // https://stackoverflow.com/questions/8487986/file-macro-shows-full-path

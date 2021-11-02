@@ -72,16 +72,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)flappy bird sfml\src;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)flappy bird sfml\src;$(SolutionDir)flappy bird sfml\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)flappy bird sfml\src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgManifestInstall>false</VcpkgManifestInstall>
+    <VcpkgAutoLink>false</VcpkgAutoLink>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,10 +96,13 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)thirdparty\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,12 +113,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)thirdparty\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-system.lib;sfml-audio.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -141,13 +153,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\state\ReplayState.cpp" />
+    <ClCompile Include="src\object\BackGround.cpp" />
     <ClCompile Include="src\object\Ground.cpp" />
     <ClCompile Include="src\object\Pipe.cpp" />
     <ClCompile Include="src\physic\Collision.cpp" />
     <ClCompile Include="src\object\Bird.cpp" />
-    <ClCompile Include="src\physic\Physic.cpp" />
-    <ClCompile Include="src\graphic\BirdAnimation.cpp" />
+    <ClCompile Include="src\graphic\Animation.cpp" />
     <ClCompile Include="src\state\MenuState.cpp" />
     <ClCompile Include="src\state\GameState.cpp" />
     <ClCompile Include="src\state\SplashState.cpp" />
@@ -155,19 +166,17 @@
     <ClCompile Include="src\core\main.cpp" />
     <ClCompile Include="src\core\StateManager.cpp" />
     <ClCompile Include="src\core\Time.cpp" />
-    <ClCompile Include="src\physic\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\object\BackGround.h" />
     <ClInclude Include="src\core\IStates.h" />
-    <ClInclude Include="src\state\ReplayState.h" />
     <ClInclude Include="src\object\Ground.h" />
     <ClInclude Include="src\object\Pipe.h" />
     <ClInclude Include="src\object\Object.h" />
     <ClInclude Include="src\physic\Collision.h" />
     <ClInclude Include="src\core\Configure.h" />
     <ClInclude Include="src\object\Bird.h" />
-    <ClInclude Include="src\physic\Physic.h" />
-    <ClInclude Include="src\graphic\BirdAnimation.h" />
+    <ClInclude Include="src\graphic\Animation.h" />
     <ClInclude Include="src\state\MenuState.h" />
     <ClInclude Include="src\core\Log.h" />
     <ClInclude Include="src\state\GameState.h" />
@@ -175,8 +184,34 @@
     <ClInclude Include="src\core\App.h" />
     <ClInclude Include="src\core\StateManager.h" />
     <ClInclude Include="src\core\Time.h" />
-    <ClInclude Include="src\physic\Transform.h" />
     <ClInclude Include="src\object\Unmovable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\art.png" />
+    <Image Include="assets\background.png" />
+    <Image Include="assets\bird1.png" />
+    <Image Include="assets\bird2.png" />
+    <Image Include="assets\bird3.png" />
+    <Image Include="assets\bird4.png" />
+    <Image Include="assets\falcon.png" />
+    <Image Include="assets\gamebackground.png" />
+    <Image Include="assets\ground.png" />
+    <Image Include="assets\ground1.png" />
+    <Image Include="assets\highscore.png" />
+    <Image Include="assets\pipe.png" />
+    <Image Include="assets\playbutton.png" />
+    <Image Include="assets\replay.png" />
+    <Image Include="assets\splashscreen.png" />
+    <Image Include="assets\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\die.wav" />
+    <Media Include="assets\hit.wav" />
+    <Media Include="assets\point.wav" />
+    <Media Include="assets\wing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\rainyhearts.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

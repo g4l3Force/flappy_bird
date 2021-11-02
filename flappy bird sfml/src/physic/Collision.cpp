@@ -13,9 +13,9 @@ void Collision::init()
 
 	// set zone collision
 	m_zoneCollider.left = SCREEN_WIDTH / 2 - 50;
-	m_zoneCollider.top = 2;
+	m_zoneCollider.top = 52;
 	m_zoneCollider.width = SCREEN_WIDTH / 2;
-	m_zoneCollider.height = SCREEN_HEIGHT - 30;
+	m_zoneCollider.height = SCREEN_HEIGHT - 130;
 	m_shapeZoneCollider = setShape(m_zoneCollider, sf::Color::Cyan);
 
 	m_screenCollider.left = SCREEN_WIDTH / 2 - 48;
@@ -25,6 +25,7 @@ void Collision::init()
 	m_shapeScreeCollider = setShape(m_screenCollider, sf::Color::Magenta);
 
 	clearCollision();
+	clearRect();
 
 	previousScore = 0;
 }
@@ -35,11 +36,6 @@ bool Collision::boxCollision(sf::FloatRect rect1, sf::FloatRect rect2)
 		rect1.left + rect1.width >= rect2.left &&
 		rect1.top <= rect2.top + rect2.height &&
 		rect1.height + rect1.top >= rect2.top) ? true : false;
-
-	//return (rect1.left < rect2.left + rect2.width &&
-	//	rect1.left + rect1.width > rect2.left &&
-	//	rect1.top < rect2.left + rect2.height &&
-	//	rect1.top + rect1.height > rect2.left) ? true : false;
 }
 
 void Collision::addPipe(std::shared_ptr<Pipe> pipe, sf::FloatRect collider)
@@ -104,7 +100,6 @@ void Collision::draw(sf::RenderWindow& window)
 	for (auto& shape : m_Shape) {
 		window.draw(shape);
 	}
-	clearRect();
 }
 
 void Collision::clearRect()

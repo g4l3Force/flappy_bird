@@ -67,11 +67,10 @@ private:
 		return shape;
 	}
 	
-	void clearRect(); // clear all rect and shape
-
 	void clearCollision(); //clear all collision in birdCollision
 
 public:
+	void clearRect(); // clear all rect and shape
 	bool mouseCollision(sf::Vector2i mousePosition, float x1, float x2, float y1, float y2)// 1 < 2
 	{
 		if (mousePosition.x > x1 && mousePosition.x < x2 && mousePosition.y > y1 && mousePosition.y < y2)
